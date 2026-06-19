@@ -1,0 +1,409 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "email": "usuario@smartgas.com",
+      "password": "smartgas",
+      "name": "Carlos Mendoza",
+      "role": "Restaurant Administrator",
+      "accountType": "commercial",
+      "planId": 1
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "fullName": "Carlos Mendoza",
+      "email": "usuario@smartgas.com",
+      "role": "Restaurant Administrator",
+      "accountType": "commercial",
+      "businessName": "Restaurante La Brasa",
+      "phone": "+51 987 654 321",
+      "district": "Miraflores, Lima",
+      "planId": 1,
+      "memberSince": "2026-04-15",
+      "verified": true
+    }
+  ],
+  "plans": [
+    {
+      "id": 1,
+      "name": "Basic",
+      "price": 30,
+      "currency": "PEN",
+      "description": "Essential monitoring for one small kitchen or initial setup",
+      "features": [
+        "Up to 5 sensors",
+        "Web alerts",
+        "Basic incident reports",
+        "Up to 3 zones",
+        "Email support"
+      ],
+      "maxSensors": 5,
+      "maxZones": 3,
+      "channels": [
+        "Web"
+      ],
+      "reportLevel": "Basic",
+      "supportLevel": "Email"
+    },
+    {
+      "id": 2,
+      "name": "Professional",
+      "price": 70,
+      "currency": "PEN",
+      "description": "Restaurant and commercial kitchen monitoring",
+      "features": [
+        "Up to 12 sensors",
+        "SMS and email notifications",
+        "Incident history",
+        "Up to 5 zones",
+        "Team access"
+      ],
+      "maxSensors": 12,
+      "maxZones": 5,
+      "channels": [
+        "Web",
+        "Email",
+        "SMS"
+      ],
+      "reportLevel": "Advanced",
+      "supportLevel": "Standard"
+    },
+    {
+      "id": 3,
+      "name": "Corporate",
+      "price": 100,
+      "currency": "PEN",
+      "description": "Advanced multi-zone safety management",
+      "features": [
+        "Unlimited sensors",
+        "Priority alerts",
+        "Advanced analytics",
+        "Unlimited zones",
+        "Dedicated support",
+        "Multiple locations"
+      ],
+      "maxSensors": "Unlimited",
+      "maxZones": "Unlimited",
+      "channels": [
+        "Web",
+        "Email",
+        "SMS",
+        "Priority escalation"
+      ],
+      "reportLevel": "Advanced",
+      "supportLevel": "Priority"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "planId": 1,
+      "status": "Active",
+      "startDate": "2026-04-15",
+      "renewalDate": "2027-04-15"
+    }
+  ],
+  "subscriptionRequests": [],
+  "zones": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "name": "Main Kitchen",
+      "description": "Primary cooking area",
+      "status": "Safe",
+      "gasLevel": 18,
+      "temperature": 28,
+      "sensorCount": 2,
+      "riskLevel": "Low",
+      "lastUpdated": "2026-05-13T08:30:00.000Z",
+      "icon": "kitchen-icon.png",
+      "sensitivity": "High",
+      "active": true
+    },
+    {
+      "id": 2,
+      "accountId": 1,
+      "name": "Warehouse",
+      "description": "Storage and supply area",
+      "status": "Warning",
+      "gasLevel": 35,
+      "temperature": 32,
+      "sensorCount": 2,
+      "riskLevel": "Medium",
+      "lastUpdated": "2026-05-13T08:25:00.000Z",
+      "icon": "warehouse-icon.png",
+      "sensitivity": "Medium",
+      "active": true
+    },
+    {
+      "id": 3,
+      "accountId": 1,
+      "name": "Dining Area",
+      "description": "Customer dining space",
+      "status": "Safe",
+      "gasLevel": 12,
+      "temperature": 25,
+      "sensorCount": 1,
+      "riskLevel": "Low",
+      "lastUpdated": "2026-05-13T08:20:00.000Z",
+      "icon": "home-zone-icon.png",
+      "sensitivity": "Low",
+      "active": true
+    }
+  ],
+  "sensors": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "name": "Gas Sensor Alpha",
+      "code": "SG-001",
+      "type": "Gas LP",
+      "zoneId": 1,
+      "locationDetail": "Near stove",
+      "status": "Online",
+      "battery": 91,
+      "lastReading": "18 ppm",
+      "lastConnected": "2026-05-13T08:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "accountId": 1,
+      "name": "Temp Sensor Alpha",
+      "code": "SG-002",
+      "type": "Temperature",
+      "zoneId": 1,
+      "locationDetail": "Ceiling mount",
+      "status": "Online",
+      "battery": 84,
+      "lastReading": "28 C",
+      "lastConnected": "2026-05-13T08:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "accountId": 1,
+      "name": "Gas Sensor Beta",
+      "code": "SG-003",
+      "type": "Gas LP",
+      "zoneId": 2,
+      "locationDetail": "Near storage tanks",
+      "status": "Online",
+      "battery": 77,
+      "lastReading": "35 ppm",
+      "lastConnected": "2026-05-13T08:25:00.000Z"
+    },
+    {
+      "id": 4,
+      "accountId": 1,
+      "name": "Temp Sensor Beta",
+      "code": "SG-004",
+      "type": "Temperature",
+      "zoneId": 2,
+      "locationDetail": "Wall mount east",
+      "status": "Online",
+      "battery": 80,
+      "lastReading": "32 C",
+      "lastConnected": "2026-05-13T08:25:00.000Z"
+    },
+    {
+      "id": 5,
+      "accountId": 1,
+      "name": "Gas Sensor Gamma",
+      "code": "SG-005",
+      "type": "Gas LP",
+      "zoneId": 3,
+      "locationDetail": "Entrance wall",
+      "status": "Online",
+      "battery": 93,
+      "lastReading": "12 ppm",
+      "lastConnected": "2026-05-13T08:20:00.000Z"
+    }
+  ],
+  "sensorReadings": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "sensorId": 1,
+      "zoneId": 1,
+      "gasValue": 16,
+      "temperatureValue": 27,
+      "timestamp": "2026-05-13T06:00:00.000Z",
+      "triggeredIncident": false
+    },
+    {
+      "id": 2,
+      "accountId": 1,
+      "sensorId": 1,
+      "zoneId": 1,
+      "gasValue": 18,
+      "temperatureValue": 28,
+      "timestamp": "2026-05-13T07:00:00.000Z",
+      "triggeredIncident": false
+    },
+    {
+      "id": 3,
+      "accountId": 1,
+      "sensorId": 3,
+      "zoneId": 2,
+      "gasValue": 35,
+      "temperatureValue": 32,
+      "timestamp": "2026-05-13T07:30:00.000Z",
+      "triggeredIncident": true
+    },
+    {
+      "id": 4,
+      "accountId": 1,
+      "sensorId": 2,
+      "zoneId": 1,
+      "gasValue": 20,
+      "temperatureValue": 29,
+      "timestamp": "2026-05-13T08:00:00.000Z",
+      "triggeredIncident": false
+    },
+    {
+      "id": 5,
+      "accountId": 1,
+      "sensorId": 5,
+      "zoneId": 3,
+      "gasValue": 12,
+      "temperatureValue": 25,
+      "timestamp": "2026-05-13T08:15:00.000Z",
+      "triggeredIncident": false
+    }
+  ],
+  "incidents": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "code": "INC-001",
+      "type": "Gas Leak",
+      "zoneId": 2,
+      "zoneName": "Warehouse",
+      "sensorId": 3,
+      "sensorCode": "SG-003",
+      "detectedValue": "35 ppm",
+      "severity": "Warning",
+      "status": "Detected",
+      "detectedAt": "2026-05-13T07:30:00.000Z",
+      "reviewedAt": null,
+      "resolvedAt": null,
+      "note": ""
+    }
+  ],
+  "alerts": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "code": "ALT-001",
+      "incidentId": 1,
+      "zoneId": 2,
+      "zoneName": "Warehouse",
+      "event": "Gas level above warning threshold",
+      "severity": "Warning",
+      "status": "Pending",
+      "createdAt": "2026-05-13T07:30:00.000Z",
+      "resolvedAt": null
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "alertId": 1,
+      "incidentId": 1,
+      "message": "Gas level in Warehouse reached 35 ppm. Incident INC-001 was created.",
+      "channel": "Web",
+      "read": false,
+      "confirmed": false,
+      "confirmedAt": null,
+      "createdAt": "2026-05-13T07:30:00.000Z",
+      "messageKey": "messageIncidentCreated",
+      "messageParams": {
+        "severity": "Warning",
+        "type": "Gas Leak",
+        "zone": "Warehouse",
+        "sensor": "SG-003",
+        "value": "35 ppm",
+        "code": "INC-001"
+      }
+    }
+  ],
+  "settings": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "gasWarningLimit": 30,
+      "gasCriticalLimit": 50,
+      "temperatureWarningLimit": 35,
+      "temperatureCriticalLimit": 55,
+      "webAlerts": true,
+      "emailAlerts": true,
+      "smsAlerts": false,
+      "language": "en",
+      "readingIntervalSeconds": 10,
+      "autoCreateIncidents": true,
+      "autoResolveSafeReadings": false,
+      "offlineSensorAlerts": true,
+      "lowBatteryAlerts": true,
+      "criticalOnly": false,
+      "dailySummary": false,
+      "soundAlerts": true,
+      "notifyEmergencyContact": true,
+      "smokeSensitivity": "Medium",
+      "coWarningLimit": 35,
+      "sessionDurationHours": 8,
+      "autoLogout": true,
+      "suspiciousLoginAlerts": true,
+      "twoFactorEnabled": false,
+      "dateFormat": "DD/MM/YYYY",
+      "darkMode": false,
+      "compactView": false
+    }
+  ],
+  "emergencyContacts": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "emergencyName": "Rosa Vargas",
+      "emergencyPhone": "+51 998 877 665",
+      "emergencyEmail": "emergencias@smartgas.com"
+    }
+  ],
+  "accountActivities": [
+    {
+      "id": 1,
+      "accountId": 1,
+      "type": "login",
+      "title": "activityLogin",
+      "detail": "Chrome · Lima, PE",
+      "createdAt": "2026-05-13T09:15:00.000Z"
+    },
+    {
+      "id": 2,
+      "accountId": 1,
+      "type": "device",
+      "title": "activityDeviceAdded",
+      "detail": "SG-005 · Dining Area",
+      "createdAt": "2026-05-13T08:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "accountId": 1,
+      "type": "incident",
+      "title": "activityIncidentUpdated",
+      "detail": "INC-001 · Warehouse",
+      "createdAt": "2026-05-12T22:14:00.000Z"
+    },
+    {
+      "id": 4,
+      "accountId": 1,
+      "type": "settings",
+      "title": "activitySettingsUpdated",
+      "detail": "Safety thresholds",
+      "createdAt": "2026-05-12T18:00:00.000Z"
+    }
+  ]
+}
